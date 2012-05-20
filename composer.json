@@ -1,0 +1,16 @@
+{
+    "name": "aspyct/mongomap",
+    "type": "library",
+    "description": "a tiny object to array mapper, built for MongoDB",
+    "keywords": ["odm", "database", "mongo"],
+    "license": "MIT",
+    "authors": [
+        {"name": "Antoine d'Otreppe de Bouvette", "email": "a.dotreppe@aspyct.org"}
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "psr-0": {"Aspyct\\MongoMap": "src/"}
+    }
+}
