@@ -1,7 +1,7 @@
 {
     "name": "aspyct/mongomap",
     "type": "library",
-    "description": "a tiny object to array mapper, built for MongoDB",
+    "description": "A tiny object to array mapper, built for MongoDB",
     "keywords": ["odm", "database", "mongo"],
     "license": "MIT",
     "authors": [
