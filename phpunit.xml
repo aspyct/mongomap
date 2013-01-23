@@ -1,0 +1,8 @@
+<phpunit>
+    <testsuites>
+        <testsuite name="Main">
+            <file>tests/src/Aspyct/MongoMap/ObjectInflatorTest.php</file>
+            <file>tests/src/Aspyct/MongoMap/ObjectFlattenerTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>

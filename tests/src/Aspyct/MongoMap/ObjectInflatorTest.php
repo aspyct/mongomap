@@ -3,6 +3,7 @@
 namespace Aspyct\MongoMap;
 
 require_once dirname(__FILE__) . '/../../../../src/Aspyct/MongoMap/ObjectInflator.php';
+require_once dirname(__FILE__) . '/TestClasses.php';
 
 /**
  * Test class for ObjectInflator.
@@ -17,28 +18,11 @@ class ObjectInflatorTest extends \PHPUnit_Framework_TestCase
     protected $object;
     private $uniqueStringCount = 0;
 
-    /**
-     * Sets up the fixture, for example, opens a network connection.
-     * This method is called before a test is executed.
-     */
     protected function setUp()
     {
         $this->object = new ObjectInflator;
     }
 
-    /**
-     * Tears down the fixture, for example, closes a network connection.
-     * This method is called after a test is executed.
-     */
-    protected function tearDown()
-    {
-
-    }
-
-    /**
-     * @covers Aspyct\MongoMap\ObjectInflator::inflate
-     * @todo Implement testInflate().
-     */
     public function testInflateFlatObject()
     {
         $publicWSet = $this->getUniqueString();
@@ -156,86 +140,6 @@ class ObjectInflatorTest extends \PHPUnit_Framework_TestCase
     {
         $this->uniqueStringCount++;
         return md5(time() + $this->uniqueStringCount);
-    }
-
-}
-
-class ObjectInflatorTestATestClass
-{
-
-    public $publicWSet;
-    public $publicWoSet;
-    protected $protectedWSet;
-    protected $protectedWoSet;
-    private $privateWSet;
-    private $privateWoSet;
-
-    public function getPublicWSet()
-    {
-        return $this->publicWSet;
-    }
-
-    public function setPublicWSet($publicWSet)
-    {
-        $this->publicWSet = $publicWSet;
-    }
-
-    public function getProtectedWSet()
-    {
-        return $this->protectedWSet;
-    }
-
-    public function setProtectedWSet($protectedWSet)
-    {
-        $this->protectedWSet = $protectedWSet;
-    }
-
-    public function getPrivateWSet()
-    {
-        return $this->privateWSet;
-    }
-
-    public function setPrivateWSet($privateWSet)
-    {
-        $this->privateWSet = $privateWSet;
-    }
-
-    public function defineProtectedWoSet($protectedWoSet)
-    {
-        $this->protectedWoSet = $protectedWoSet;
-    }
-
-    public function definePrivateWoSet($privateWoSet)
-    {
-        $this->privateWoSet = $privateWoSet;
-    }
-
-}
-
-class ObjectInflatorTestBTestClass
-{
-
-    private $a;
-    private $b;
-
-    public function getA()
-    {
-        return $this->a;
-    }
-
-    public function setA($a)
-    {
-        $this->a = $a;
-    }
-
-    public function getB()
-    {
-        return $this->b;
-    }
-
-    public function setB($b)
-    {
-        $this->b = $b;
     }
 
 }
